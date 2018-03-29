@@ -1,2 +1,37 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+package paqueton;
+import java.io.*; //importo algo no me acuerdo que..//
+import java.util.*;
+
+public class linea
+{ 
+	 public static void main (String[] args) throws java.io.IOException
+	 {
+		 String s1;
+	     String s2;
+	    // Cargamos el buffer con el contenido del archivo a todo ritmo//
+	     BufferedReader buffer  = new BufferedReader (new  FileReader ("nuevo.txt"));
+	     //leemos la primer linea//
+	     s1 = buffer.readLine();
+	     
+	     System.out.println ("La primera linea del archivo es: " + s1);
+	        System.out.println ("La linea tiene " + s1.length() + " caracteres");
+	        System.out.println ();
+	        System.out.println ("Separando la linea del texto en  palabras:");
+	        
+	        
+	        
+	        
+	        int numTokens = 0;
+	        StringTokenizer st = new StringTokenizer (s1);
+	        while (st.hasMoreTokens()) // este ciclo es para mostrar token por token//
+	        {
+	            s2 = st.nextToken();
+	            // aca iria el ciclo de la comparacion  entro los token y el txt //
+	            numTokens++;
+	            System.out.println ("    Palabra " + numTokens + " es: " + s2);
+	        }
+	    
+	 }
+	 
+
+}
