@@ -1,0 +1,214 @@
+# newp
+d
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <title>MENU</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+}
+body,html{
+  height: 100%;
+  background-repeat: no-repeat; 
+  background-color:#F6F8F3; 
+}
+  .wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.footer {
+  height:50px;
+  position: fixed;
+}
+
+.opciones{
+  width: 250px;
+  height: 100px;
+  background: #28A744;
+  color: #fff;
+  font-size: 1.2em;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.opciones:hover{
+  animation-name: AnimHover;
+  cursor: pointer;
+  color: #fff
+}
+@keyframes AnimHover{
+            0%{
+                transform: scale3d(1,1,1);
+            }
+            25%{
+                box-shadow: 0px 0px 5px #000;
+            }
+            50%{
+                transform: scale3d(1.1,1.1,1.1);
+                background-color: #2D5D66;
+                box-shadow: 0px 0px 5px #000;
+            }
+            75%{
+                box-shadow: 0px 0px 5px #000;
+            }         
+        }
+</style>
+</head>
+<body>
+<!--SECCION SISTEMA DE GESTION RECIPLAS-->
+<section>
+  <div class="py-3 mb-2 bg-light text-dark">
+  <header>
+    <div class="container-fluid">      
+      <div class="border-secondary text-success p-3 bg-secondary text-black shadow bg-white rounded">
+        <div class="row">
+          <div class="col-10 pt-2">
+            <h1>
+              <img src="https://i.ibb.co/1qvWxM9/LOGORECIPLAS.png" alt="LOGORECIPLAS" border="0" class="text bg-gradient-secondary">Sistema de Gestion Reciplas        
+            </h1>
+          </div>
+          <div class="col-2 text-right pt-2">  
+            <a href="C:\Users\matu_\Desktop\TPI\base\PAGINA PRINCIPAL.html" class="btn btn-success btn-lg">
+              Salir
+            </a>        
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  </div>
+</section>
+
+ <!--SECCION BREADCRUMB-->
+ <section>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active"><a class="text-success" href="">Pagina principal</a> </li>
+      <li class="breadcrumb-item active" aria-current="page"> Menú Produccion</li>
+    
+    </ol>
+  </nav>
+</section>
+
+<!--SECCION NOMBRE DE USUARIO-->
+<section class="usuario">
+  <h2 class="px-3">
+      <p class="text-secondary"><i class="fa fa-user"></i> Bienvenido Jose Perez</p>
+  </h2>
+</section>
+<hr>
+
+
+
+<!--SECCION MENU-->
+  <section class=" p-5 wrapper"> 
+      <div class="container py">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3 col-lg-3 mx-lg-0" >
+                  <a href="#" class="btn btn-lg opciones text-wrap py-4">
+                   Registrar Ingreso de Materia Prima
+                  </a>
+              
+          </div>
+          <div class="col-12 col-md-6 mb-3 col-lg-3 mx-lg-0">
+                  <a href="#" class="btn btn-lg opciones  text-wrap py-4">
+                     Modificar Stock de Productos Fabricados
+                  </a>
+          </div>
+          <div class="col-12 col-md-6 mb-3 col-lg-3 mx-lg-auto">
+            <button type="button" class="btn btn-lg opciones text-wrap py-3" data-toggle="modal" data-target="#CPCmodal">
+              Consultar pedido de cliente
+            </button>
+          </div>
+          <div class="col-12 col-md-6 mb-3 col-lg-3 mx-lg-0">
+                  <a href="#" class="btn btn-lg opciones text-wrap pt-3">
+                    Consultar/Emitir Reportes de Stock
+                  </a>
+          </div>
+        </div>
+      </div>
+</section>    
+
+<!--SECCION FOOTER-->
+<section>
+  <footer class="footer fixed-bottom font-small text-center bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="m-0 py-3">Copyright @ 2020. Todos los derechos reservados. Desing Patterns</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!--SECCION REPORTE Pedido de Cliente-->
+<div class="modal fade" id="CPCmodal" tabindex="-1" role="dialog" aria-labelledby="MST1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="MST1">Listado de Pedido de Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+
+          <table class="container table table-bordered border-success table-hover table-white">
+            <div class="container modal-body">
+              <div class="input-group">
+                
+                <thead class=" text-center text-black">
+                  <tr  class="table-success">
+                      <th scope="col"><i class="fas fa-address-book"></i> Idcliente</th>
+                      <th scope="col"><i class="fas fa-address-card"></i> Nombre</th>
+                      <th scope="col"><i class="fas fa-calendar-check"></i> Fecha</th>
+                      <th scope="col"><i class=" "></i></i> ID_Pedido</th>
+                      <th scope="col"><i class="fas fa-barcode"></i></i> ID producto</th>
+                      <th scope="col"><i class="fas fa-weight-hanging"></i> Cantidad</th>
+                      <th scope="col"><i class="fas fa-info-circle"></i> Detalle</th>
+                      
+                      <th scope="col"><i class=" "></i>Total </th>
+                  </tr>
+            
+              </thead>
+              </div>
+              
+              </div>
+          </table>
+        </div>
+
+
+    
+  <div class="modal-footer">
+
+    <div class="container text-right p-3 ">
+    <button type="button" class="btn btn-success opciones" data-dismiss="modal"><i class="fa fa-print"></i>Imprimir</button>
+    <button type="button" class="btn btn-success" data-dismiss="modal"> <i class="fa fa-reply"></i>Volver</button>
+  </div>   
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
